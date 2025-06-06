@@ -1,0 +1,6 @@
+@KeyOrderAPI_HostAddress = http://localhost:5029
+
+GET {{KeyOrderAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

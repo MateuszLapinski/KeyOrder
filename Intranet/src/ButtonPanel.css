@@ -1,0 +1,24 @@
+
+.menu-content {
+    margin-top: 1rem;
+}
+
+.sideMenuButton {
+    margin-right: -8px;
+    margin-left: -8px;
+    font-size: 16px !important;
+    text-align:start;
+}
+
+.sideMenuButton:hover  {
+    background-color:#414e55;
+
+}
+
+.statusSideBar{
+    color:white ;
+}
+
+.sideButtonIcon{
+   font-size:16px;
+}

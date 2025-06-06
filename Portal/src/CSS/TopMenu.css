@@ -1,0 +1,97 @@
+.logoImage {
+    height: 75px;
+}
+
+.topmenu {
+    height: 75px;
+    background-color: #343a40 !important;
+    color:white !important;
+}
+.menuLinks{
+    color:white !important;
+}
+
+.mainContent {
+    padding-top: 75px;
+}
+
+.topmenuContainer{
+    color:white;
+    height:75px;
+}
+
+
+.menuDropDown a{
+    color:white !important;
+}
+
+
+.mega-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 500px;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border: none;
+    border-top: 2px solid #eee;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.first_mega-col-left {
+    background-color: #007bff0d;
+    height: 500px;
+}
+
+.padding-30 {
+    padding-top: 30px;
+    margin-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+
+
+
+    .mega-menu a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+    }
+
+        .mega-menu a:hover {
+            text-decoration: underline;
+        }
+
+    .mega-menu .mega-header {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .mega-menu .mega-item-icon {
+        margin-right: 0.5rem;
+        color: #007bff;
+    }
+
+@media (max-width: 992px) {
+    .mega-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        padding: 0.5rem 1rem;
+    }
+
+        .mega-menu .row {
+            flex-direction: column;
+        }
+
+        .mega-menu .mega-col-left,
+        .mega-menu .mega-col {
+            border: none;
+            padding: 0.5rem 0;
+        }
+}

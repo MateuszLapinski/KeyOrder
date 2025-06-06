@@ -1,0 +1,53 @@
+.customer-orders-card {
+    max-height: 100%;
+    border-radius: 16px !important;
+
+}
+
+.card-body {
+}
+
+    .customer-orders-card .reload-icon {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+        .customer-orders-card .reload-icon:hover {
+            transform: rotate(90deg);
+        }
+
+    .customer-orders-card table th {
+        font-weight: 600;
+        color: #888;
+        font-size: 0.9rem;
+    }
+
+    .customer-orders-card table td {
+        font-size: 0.9rem;
+    }
+
+    .customer-orders-card .order-row {
+        transition: background-color 0.3s;
+    }
+
+        .customer-orders-card .order-row:hover {
+            background-color: rgba(0,0,0,0.03);
+        }
+
+    .customer-orders-card .delivered {
+        background-color: #f3fcef;
+    }
+
+    .customer-orders-card .processed {
+        background-color: #f0f9ff;
+    }
+
+    .customer-orders-card .cancelled {
+        background-color: #fff2f2;
+    }
+
+
+.wrapperTable{
+    overflow-y:auto;
+    max-height:400px;
+}

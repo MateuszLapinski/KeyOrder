@@ -1,0 +1,109 @@
+/* Ustawienia g³ównego kontenera i struktury */
+.container-fluid {
+    width: 100%;
+    height: 100%;
+}
+.intranet-layout {
+    height: 100%;
+
+}
+
+.logoImage{
+    height:75px;
+}
+
+
+.border-bottom-header {
+    border-bottom: 1px solid #6d7a86;
+}
+.menu-naglowek {
+    height:85px;
+}
+
+.h-lg-86px{
+    height:85px;
+}
+
+.w-295px{
+    height:295px;
+}
+.menu {
+    position: fixed;
+    background-color: #343a40;
+}
+
+
+
+.menu .menu-body {
+    height: 100%;
+    box-shadow: 11px 20px 30px -36px var(--cardShadow);
+}
+
+
+.menuPrawyGornyRog {
+    padding-right: 15px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    align-self: center;
+}
+
+.menuPrawyGornyRog-ikonki li {
+    float: left;
+}
+
+.menuPrawyGornyRog-ikonki {
+    list-style-type: none;
+    margin-bottom:0;
+}
+
+.menuPrawyGornyRog-ikonki li a {
+        padding-right: 0 !important;
+        margin-right: 15px;
+        padding: 0 15px;
+        padding-right: 15px;
+        display: block;
+
+}
+
+.menuPrawyGornyRog-ikonki li a .ant-icons {
+        height: 64px;
+        font-size: 1.625rem;
+        line-height: 64px;
+}
+    .menuPrawyGornyRog-ikonki li a .ant-icons:hover {
+        cursor:pointer;
+        
+    }
+
+
+/*Dropdown*/
+.dropdown-toggle-icon {
+    cursor: pointer;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.dropdownMenu{
+    z-index:999;
+}
+
+.MainContentWrapper {
+    height: calc(100vh - 85px);
+    overflow-y: scroll !important;
+}
+.main-content {
+
+}
+
+.belka-gorna {
+    position: relative;
+    z-index: 900;
+    background-color: var(--bodyBackgroundColor);
+}
+
+.dark-mode {
+    background-color: #2e3134;
+    color: #fff;
+}

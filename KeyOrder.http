@@ -1,0 +1,6 @@
+@KeyOrder_HostAddress = http://localhost:5245
+
+GET {{KeyOrder_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
