@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { FaCheck } from 'react-icons/fa'; 
 
 const tiers = [
     {
@@ -51,7 +52,7 @@ const tiers = [
 
 export default function PricingSection() {
     return (
-        <Container className="py-5">
+        <Container className="py-5 mg-200">
             <Row className="g-4 justify-content-center">
                 {tiers.map((tier) => (
                     <Col key={tier.name} xs={12} md={6} lg={3}>
@@ -75,7 +76,7 @@ export default function PricingSection() {
                                 <ul className="list-unstyled text-start mt-3 mb-0">
                                     {tier.features.map((f) => (
                                         <li key={f} className="mb-2">
-                                            • {f}
+                                            <FaCheck className="me-2 text-success mt-1" /> {f}
                                         </li>
                                     ))}
                                 </ul>

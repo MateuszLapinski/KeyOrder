@@ -21,23 +21,12 @@ namespace KeyOrderAPI.Data
         public DbSet<CalendarEvent> CalendarEvents { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
+        public DbSet<ClientProductFavorite> ClientProductFavorites { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            // Przykład konfiguracji: ustaw precyzję dla cen
-         /*   modelBuilder.Entity<Product>()
-                .Property(p => p.UnitPrice)
-                .HasColumnType("decimal(18,2)");*/
-
-            // Jeśli potrzebujesz dodatkowych konfiguracji (klucze złożone, relacje, wartości domyślne)
-            // tutaj możesz je dodać:
-            //
-            // modelBuilder.Entity<Order>()
-            //     .Property(o => o.Value)
-            //     .HasColumnType("decimal(18,2)")
-            //     .HasDefaultValue(0m);
         }
     }
 }

@@ -6,24 +6,28 @@ import {
     Row,
     Col,
     Card,
-    Button,
+   
 } from 'react-bootstrap';
 import { Users, Globe, Shield } from 'lucide-react';
 import TopMenu from '../Components/topmenu';
 import FirstSection from '../Components/firstSection';
 import Pricing from '../Components/Pricing';
+import FooterComponent from '../Components/Footer';
+import TestimonialComponent from '../Components/TestimonialComponent';
+import '../CSS/LandingPage.css';
 
 export default function LandingPage() {
+
+    
+
+
     return (
         <>
-            {/* Navbar */}
             <TopMenu/>
             <Container className="mainContent">
-            {/* Hero Section */}
             <FirstSection/>
 
-            {/* Features Section */}
-            <Container id="features" className="py-5">
+                <Container id="features" className="py-5 mg-200">
                 <h2 className="text-center mb-4">Key Features</h2>
                 <Row className="g-4">
                     {[
@@ -43,63 +47,14 @@ export default function LandingPage() {
                     ))}
                 </Row>
             </Container>
-
-            {/* Testimonials Section */}
-            <Container id="testimonials" className="py-5 bg-white rounded shadow-sm">
-                <h2 className="text-center mb-4">What Our Clients Say</h2>
-                <Row className="g-4">
-                    {[
-                        { name: 'Anna Kowalska', role: 'CEO, Acme Corp', text: 'Transformacyjne narzêdzie, które zmieni³o nasz¹ pracê.' },
-                        { name: 'John Smith', role: 'CTO, TechSolutions', text: 'Niezawodna i intuicyjna platforma B2B.' },
-                        { name: 'Maria Garcia', role: 'COO, GlobalTrade', text: 'Doskona³e wsparcie i bezpieczne œrodowisko.' },
-                    ].map((t, idx) => (
-                        <Col md={4} key={idx}>
-                            <Card className="h-100 border-0">
-                                <Card.Body className="p-4">
-                                    <Card.Text className="fst-italic">“{t.text}”</Card.Text>
-                                    <Card.Subtitle className="mt-3 fw-semibold">{t.name}</Card.Subtitle>
-                                    <Card.Text className="text-muted small">{t.role}</Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    ))}
-                </Row>
-            </Container>
-
-            {/* CTA Section */}
-
-            <Pricing id="pricing" className="py-5 text-center" />
+            <TestimonialComponent/>
+                <Pricing id="pricing" className="py-5 mg-200" />
 
             </Container>
+            <FooterComponent/>
+
            
-
-            {/* Footer */}
-            <footer className="bg-light text-muted py-4">
-                <Container>
-                    <Row>
-                        <Col md={4} className="mb-3">
-                            <h5>KeyOrder</h5>
-                            <p>© {new Date().getFullYear()} KeyOrder. All rights reserved.</p>
-                        </Col>
-                        <Col md={4} className="mb-3">
-                            <h6>Resources</h6>
-                            <Nav className="flex-column">
-                                <Nav.Link href="#" className="ps-0">Blog</Nav.Link>
-                                <Nav.Link href="#" className="ps-0">Documentation</Nav.Link>
-                                <Nav.Link href="#" className="ps-0">Support</Nav.Link>
-                            </Nav>
-                        </Col>
-                        <Col md={4} className="mb-3">
-                            <h6>Company</h6>
-                            <Nav className="flex-column">
-                                <Nav.Link href="#" className="ps-0">About Us</Nav.Link>
-                                <Nav.Link href="#" className="ps-0">Careers</Nav.Link>
-                                <Nav.Link href="#" className="ps-0">Contact</Nav.Link>
-                            </Nav>
-                        </Col>
-                    </Row>
-                </Container>
-            </footer>
+          
         </>
     );
 }

@@ -3,6 +3,7 @@ import { Navbar, Nav, NavDropdown, Container, Button, Image } from 'react-bootst
 import KeyOrderDark from '../assets/KeyOrder_dark.png';
 import MegaDropdown from './MegaDropDown';
 import FirstMegaContent from './FirstMegaContent';
+import MenuTabsComponent from './MenuTabsComponent';
 function TopMenu() {
     return (
       
@@ -10,35 +11,32 @@ function TopMenu() {
             <Container className="topmenuContainer">
               
                 <Navbar.Brand href="#">
-                    <Image className="logoImage" src={KeyOrderDark} alt="KeyOrderDark" />
+                    <Image className="logoImage " src={KeyOrderDark} alt="KeyOrderDark" />
                 </Navbar.Brand>
 
      
                 <Nav className="me-auto align-items-center">
-                    <MegaDropdown title="Set up a shop">
+                    <MegaDropdown title="Set up a shop" >
                         <FirstMegaContent />
                     </MegaDropdown>
+                     
+                    <MegaDropdown title="Get to know our store" >
+                        <MenuTabsComponent />
+                    </MegaDropdown>
 
-                    <NavDropdown title="Increase your sale" className="menuDropDown" id="dropdown-zwiekszaj-sprzedaz">
-                       
-                    </NavDropdown>
-
-                    {/* Trzeci NavDropdown – „Przenieœ sklep” */}
-                    <NavDropdown title="Migrate a shop" className="menuDropDown"  id="dropdown-przenies-sklep">
-                        
-                    </NavDropdown>
+                    <Nav.Link href="/migrate" className="menuDropDown">
+                        Migrate a shop
+                    </Nav.Link>
                 </Nav>
 
-                {/* Toggler (zwraca siê w widoku mobilnym) */}
                 <Navbar.Toggle aria-controls="navbar-nav" />
 
-                {/* NAV po prawej stronie */}
                 <Navbar.Collapse id="navbar-nav">
                     <Nav className="ms-auto align-items-center">
                         <Nav.Link href="#features" className="menuLinks">Features</Nav.Link>
                         <Nav.Link href="#testimonials" className="menuLinks">Testimonials</Nav.Link>
-                        <Nav.Link href="#pricing" className="menuLinks">Pricing</Nav.Link>
-                        <Button variant="primary" className="ms-3">Login</Button>
+                        <Nav.Link href="/pricingpage" className="menuLinks">Pricing</Nav.Link>
+                        <Button href="/login" variant="primary" className="ms-3">Login</Button>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

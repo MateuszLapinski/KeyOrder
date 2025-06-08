@@ -1,5 +1,6 @@
 #root {
     text-align: center;
+    font-family: system-ui, sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -12,6 +13,7 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+.read-the-docs,{
+    color: #888;
 }
+

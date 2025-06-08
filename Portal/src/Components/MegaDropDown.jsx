@@ -13,7 +13,7 @@ const MegaDropdown = ({ title, children }) => {
             onMouseEnter={() => toggleShow(true)}
             onMouseLeave={() => toggleShow(false)}
             show={show}
-            className="position-static"
+            className="position-static MegaDropDownWrapper MenuNav"
         >
             <Dropdown.Toggle
                 variant="link"

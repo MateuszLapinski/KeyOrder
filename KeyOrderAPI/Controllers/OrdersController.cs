@@ -30,6 +30,22 @@ namespace KeyOrderAPI.Controllers
             return Ok(orders);
         }
 
+
+        [HttpGet("favorites/{clientId}")]
+        public async Task<ActionResult<IEnumerable<Product>>> GetFavoritesByClient(int clientId)
+        {
+            var favProducts = await (
+                from p in _context.Products
+                join f in _context.ClientProductFavorites
+                    on p.Id equals f.ProductId
+                where f.ClientId == clientId
+                select p
+            ).ToListAsync();
+
+            return Ok(favProducts);
+        }
+
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Order>> Get(int id)
         {

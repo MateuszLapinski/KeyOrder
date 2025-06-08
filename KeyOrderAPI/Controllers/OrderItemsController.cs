@@ -18,16 +18,15 @@ namespace KeyOrderAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<OrderItem>>> GetAll() =>
             await _context.OrderItems
-                .Include(oi => oi.Order)
-                .Include(oi => oi.Product)
+               
+              
                 .ToListAsync();
 
         [HttpGet("{id}")]
         public async Task<ActionResult<OrderItem>> Get(int id)
         {
             var item = await _context.OrderItems
-                .Include(oi => oi.Order)
-                .Include(oi => oi.Product)
+              
                 .FirstOrDefaultAsync(oi => oi.Id == id);
 
             if (item == null) return NotFound();
