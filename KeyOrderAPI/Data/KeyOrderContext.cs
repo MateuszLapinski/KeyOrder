@@ -1,5 +1,4 @@
-﻿// Data/KeyOrderContext.cs
-using KeyOrder.Models;
+﻿
 using KeyOrderAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,11 +21,13 @@ namespace KeyOrderAPI.Data
         public DbSet<User> Users { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<ClientProductFavorite> ClientProductFavorites { get; set; }
+        public DbSet<LoginHistory> LoginHistory { get; set; }
+        public DbSet<Organization> Organizations { get; set; } 
+        public DbSet<VerificationCode> VerificationCodes { get; set; } 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
         }
     }
 }

@@ -38,5 +38,7 @@ namespace KeyOrderAPI.Models
 
         [Column(TypeName = "nvarchar(max)")]
         public string? Notes { get; set; }
+
+
     }
 }

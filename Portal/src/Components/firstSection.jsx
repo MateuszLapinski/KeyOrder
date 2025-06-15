@@ -41,7 +41,7 @@ function FirstSection() {
                             placeholder="Wpisz adres e-mail"
                             className="border-0 rounded-0 ps-4 py-3"
                         />
-                        <Button variant="primary" className="rounded-0 px-4">
+                        <Button href="/register" variant="primary" className="rounded-0 px-4">
                             Try for Free
                         </Button>
                     </Form>

@@ -45,6 +45,24 @@ namespace KeyOrderAPI.Controllers
             { return NotFound(); }
             return NoContent();
         }
+        [HttpPut("{id}/stock")]
+        public async Task<IActionResult> UpdateStock(int id, [FromBody] StockUpdateDto dto)
+        {
+            var product = await _context.Products.FindAsync(id);
+            if (product == null) return NotFound();
+
+            product.StockQuantity = dto.StockQuantity;
+            product.UpdatedAt = DateTime.Now;
+
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
+
+        public class StockUpdateDto
+        {
+            public int StockQuantity { get; set; }
+        }
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)

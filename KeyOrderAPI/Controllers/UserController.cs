@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using KeyOrder.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using KeyOrderAPI.Data;
+using KeyOrderAPI.Models;
 
 namespace KeyOrder.Controllers
 {
@@ -36,18 +36,31 @@ namespace KeyOrder.Controllers
             return user;
         }
 
+        [HttpGet("name/{userName}")]
+        public async Task<ActionResult<User>> GetUserByName(string userName)
+        {
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.Username == userName);
+
+            if (user == null)
+                return NotFound();
+
+            return user;
+        }
+
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User user)
         {
             if (!_context.UserRoles.Any(r => r.RoleID == user.RoleID))
                 return BadRequest("Nieprawidłowa rola użytkownika.");
 
+            user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.PasswordHash);
+
             user.CreatedAt = DateTime.UtcNow;
+            user.UpdatedAt = DateTime.UtcNow;
             user.IsActive = true;
             user.IsLocked = false;
             user.TwoFactorEnabled = false;
-            user.CreatedAt = DateTime.Now;
-            user.UpdatedAt = DateTime.Now;
 
             _context.Users.Add(user);
 
@@ -62,6 +75,7 @@ namespace KeyOrder.Controllers
 
             return CreatedAtAction(nameof(GetUser), new { id = user.UserID }, user);
         }
+
 
         // PUT: api/Users/5
         [HttpPut("{id}")]

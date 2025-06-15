@@ -1,0 +1,116 @@
+/* RegisterPage.css */
+.register-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9fb;
+    padding: 24px;
+}
+
+.register-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    max-width: 420px;
+    width: 100%;
+}
+
+.register-step {
+    font-weight: bold;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.register-header {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 24px;
+}
+
+.register-notice {
+    background-color: #eef5ff;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.register-input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.register-phone-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.register-country-code {
+    padding: 12px;
+    background-color: #eee;
+    border-radius: 8px;
+    font-size: 16px;
+    min-width: 48px;
+    text-align: center;
+}
+
+.register-phone-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.register-checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 14px;
+    color: #444;
+}
+
+.register-checkbox-text {
+    line-height: 1.4;
+}
+
+.register-button {
+    background-color: #0033ff;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .register-button:hover {
+        background-color: #001dcc;
+    }
+
+.register-footer-text {
+    font-size: 12px;
+    color: #666;
+    margin-top: 12px;
+    text-align: center;
+}
+
+    .register-footer-text a {
+        color: #0033ff;
+        text-decoration: underline;
+    }

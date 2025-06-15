@@ -1,10 +1,11 @@
 ﻿using System;
 
-namespace KeyOrder.Models
+namespace KeyOrderAPI.Models
 {
     public class User
     {
         public int UserID { get; set; }
+        public int OrganizationID { get; set; }
         public string? Username { get; set; }
         public string? Email { get; set; }
         public string? PasswordHash { get; set; }
@@ -21,5 +22,7 @@ namespace KeyOrder.Models
         public string? Language { get; set; }
         public string? ProfileImageURL { get; set; }
         public string? Notes { get; set; }
+
+      
     }
 }

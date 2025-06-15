@@ -59,7 +59,18 @@ namespace KeyOrderAPI.Controllers
             return Ok(order);
         }
 
-   
+        [HttpGet("orders/company/{clientId}")]
+        public async Task<IActionResult> GetOrdersByCompany(int clientId)
+        {
+            var orders = await _context.Orders
+                .Where(o => o.ClientId == clientId)
+              
+                .ToListAsync();
+
+            return Ok(orders);
+        }
+
+
         [HttpPost]
         public async Task<ActionResult<Order>> Create([FromBody] Order order)
         {
