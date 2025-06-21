@@ -21,11 +21,9 @@ public class MailKitEmailSender : IEmailSender
         message.To.Add(MailboxAddress.Parse(to));
         message.Subject = subject;
 
-        // Możesz też użyć TextPart("plain") lub Multipart dla załączników
         message.Body = new TextPart("html") { Text = htmlBody };
 
         using var client = new SmtpClient();
-        // ustawienie timeoutu, logowanie, itp. wg potrzeb
         await client.ConnectAsync(_smtp.Host, _smtp.Port, _smtp.UseSsl ? SecureSocketOptions.SslOnConnect : SecureSocketOptions.StartTls);
         await client.AuthenticateAsync(_smtp.User, _smtp.Pass);
         await client.SendAsync(message);
